@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
     <header class="header">
             <div class="container">
                 <div class="header__flex">
@@ -25,7 +30,6 @@
                 </div>
             </div>
     </header>
-
     <div class="banner">
                 <div class="container">
                     <div class="banner__list">
@@ -258,10 +262,17 @@
     <div class="map">
                 <p class="map__text">i`m here</p>
     </div>
-
     <footer class="footer">
         <p class="footer__text">Copyright © 2021 Андрей Браун. Design by Web</p>
     </footer>
-   
+    <script>
+        window.onload = function () {
+          document.body.classList.add('loaded_hiding');
+          window.setTimeout(function () {
+            document.body.classList.add('loaded');
+            document.body.classList.remove('loaded_hiding');
+          }, 500);
+        }
+      </script>
 </body>
 </html>
