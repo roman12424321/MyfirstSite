@@ -1,5 +1,8 @@
 .header {
   background: #344051;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 }
 
 .header__flex {
@@ -17,15 +20,20 @@
   line-height: 60px;
   font-weight: 500;
   color: #ffffff;
+  -webkit-animation: comming 1s ease;
+          animation: comming 1s ease;
 }
 
 .header__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-animation: comming 1s ease;
+          animation: comming 1s ease;
 }
 
 .header__item {
+  display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 0 25px;
   text-transform: uppercase;
@@ -33,6 +41,25 @@
   line-height: 60px;
   font-weight: 500;
   color: #ffffff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.header__item:visited {
+  color: #ffffff;
+}
+
+.header__item:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #ec8702;
+}
+
+.header__item:active {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .container {
@@ -48,9 +75,14 @@
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  background: url(../img/layers.png) 90% 100%/auto 85% no-repeat, url(../img/fon_115.png) center/cover no-repeat;
+  background: url(../img/layers.png) 90% 100%/auto 85% no-repeat, fixed url(../img/fon_115.png) center/cover no-repeat;
   -webkit-box-shadow: 0px -5px 4px 0px rgba(34, 60, 80, 0.2) inset;
   box-shadow: 0px -20px 9px 0px rgba(34, 60, 80, 0.2) inset;
+  opacity: 0;
+  -webkit-animation: leftShift 2s ease forwards;
+          animation: leftShift 2s ease forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .banner__list {
@@ -85,13 +117,30 @@
 }
 
 .btn {
-  border: 0.5px solid #6d7682;
+  border: 2px solid #6d7682;
   border-radius: 5px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18.9px;
   font-weight: 500;
   color: #6d7682;
   cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  border: 2px solid #2c384a;
+  background: #2c384a;
+  color: #ffffff;
+}
+
+.btn:active {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 .btn--black {
@@ -100,6 +149,11 @@
   border: 2px solid #f9faff;
   color: white;
   background: rgba(0, 0, 0, 0.1);
+}
+
+.btn--black:hover {
+  background-color: #ffffff;
+  color: black;
 }
 
 .about-me__img {
@@ -120,9 +174,13 @@
 
 .about-me__btn {
   background: url(../img/ikonka_102.png) 5% 45% no-repeat;
-  margin-left: 420px;
+  margin-left: 410px;
   padding: 5px 13px 5px 33px;
   background-color: #ffffff;
+}
+
+.about-me__btn:hover {
+  padding: 5px 19px;
 }
 
 .title {
@@ -163,6 +221,7 @@
 
 .what-can {
   background: url(../img/kartinka_fona_60.png) center/cover no-repeat;
+  background-attachment: fixed;
 }
 
 .what-can__title {
@@ -187,6 +246,15 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.line__item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .line__img {
@@ -283,6 +351,21 @@
   font-weight: 500;
   letter-spacing: -0.06em;
   color: #ffffff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.cases__btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background: #3f495a;
+}
+
+.cases__btn:active {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 .price__container {
@@ -313,10 +396,32 @@
 }
 
 .price__select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   width: 900px;
   height: 57px;
+  background: url(../img/sloy_7_256.png) no-repeat 98%;
   background-color: #eeeeee;
   padding: 10px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.price__select:hover {
+  border: 2px solid #1c2534;
+}
+
+.price__select:active {
+  padding: 20px;
+  background: url(../img/sloy_7_256.png) no-repeat 94%;
+}
+
+.price__option {
+  padding: .75rem 2.5rem .75rem 1rem;
+  background: none;
+  border: 1px solid #d17700;
 }
 
 .price__article {
@@ -339,6 +444,7 @@
 
 .static {
   background: url(../img/fon_150.png) center/cover no-repeat;
+  background-attachment: fixed;
 }
 
 .static__container {
@@ -366,6 +472,15 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.static__item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .static__img {
@@ -435,11 +550,23 @@
 }
 
 .recall__radio {
+  cursor: pointer;
   margin-left: 14px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.recall__radio:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .contact {
   background: url(../img/fon_180.png) center/cover no-repeat;
+  background-attachment: fixed;
 }
 
 .contact__title {
@@ -467,6 +594,15 @@
 .contact__item {
   width: 156px;
   margin: 0 50px 37px 35px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.contact__item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .contact__img {
@@ -493,6 +629,13 @@
   margin-right: 24px;
   opacity: .8;
   padding: 10px;
+  -webkit-transition: all 0.4 ease;
+  transition: all 0.4 ease;
+}
+
+.contact__name:hover {
+  padding: 15px;
+  border: 2px solid #ec86028c;
 }
 
 .contact__mail {
@@ -500,6 +643,13 @@
   height: 34px;
   opacity: .8;
   padding: 10px;
+  -webkit-transition: all 0.4 ease;
+  transition: all 0.4 ease;
+}
+
+.contact__mail:hover {
+  padding: 15px;
+  border: 2px solid #ec86028c;
 }
 
 .contact__message {
@@ -508,6 +658,13 @@
   height: 94px;
   opacity: .8;
   padding: 10px;
+  -webkit-transition: all 0.4 ease;
+  transition: all 0.4 ease;
+}
+
+.contact__message:hover {
+  padding: 15px;
+  border: 2px solid #ec86028c;
 }
 
 .contact__sotial {
@@ -521,11 +678,26 @@
 }
 
 .sotial__item {
+  cursor: pointer;
   margin: 0 30.3px 6px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.2 ease;
+  transition: all 0.2 ease;
+}
+
+.sotial__item:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.sotial__item:active {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .map {
-  background: url(../img/karta_kopiya_142.png) center / cover no-repeat;
+  background: url(../img/karta_kopiya_142.png) center no-repeat;
   height: 340px;
 }
 
@@ -540,5 +712,49 @@
   font-size: 13.3px;
   font-weight: 400;
   color: #ffffff;
+}
+
+/* animation */
+@-webkit-keyframes comming {
+  from {
+    margin-top: -80px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@keyframes comming {
+  from {
+    margin-top: -80px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes leftShift {
+  from {
+    margin-right: -700px;
+    opacity: 0;
+  }
+  to {
+    margin-right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes leftShift {
+  from {
+    margin-right: -700px;
+    opacity: 0;
+  }
+  to {
+    margin-right: 0;
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
