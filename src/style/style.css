@@ -58,6 +58,23 @@ body, html{height:100%}
   display: none;
 }
 
+.slider .slick-dots li {
+  
+}
+.slick-dots li.slick-active button:before{
+
+  color: #ec8702;
+}
+.slick-dots li button:before{
+  font-size: 15px;
+  color: #ec8702;
+  
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #ec8702;
+}
+
 
 .header{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -67,7 +84,7 @@ body, html{height:100%}
 }
 
 .header__logo{
-    line-height: 60px;
+    
     font-weight: 500;
     font-size: 23px;
     text-align: center;
@@ -82,7 +99,7 @@ body, html{height:100%}
 
 .header__item{
     font-size: 14px;
-    line-height: 60px;
+    
     font-weight: 500;
     margin: 0 0 0 25px;
     text-align: center;
@@ -94,9 +111,6 @@ body, html{height:100%}
     transition: all 0.2s ease;
 }
 
-.header__item:visited{
-    color: #fff;
-}
 
 .header__item:hover{
   -webkit-transform: scale(1.2);
@@ -104,11 +118,7 @@ body, html{height:100%}
   color: #ec8702;
 }
 
-.header__item:active {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-}
-  
+
 .banner {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: -webkit-box;
@@ -128,6 +138,8 @@ body, html{height:100%}
     -webkit-animation-delay: 1s;
             animation-delay: 1s;
 }
+
+
   
 .banner__title {
     text-align: center;
@@ -229,12 +241,15 @@ body, html{height:100%}
 }
 
 
+
 .what-can {
+ 
   background: url(../img/kartinka_fona_60.png) center/cover no-repeat;
   background-attachment: fixed;
 }
 
 .what-can{
+  
   padding: 0 0 92px;
 }
 
@@ -592,6 +607,40 @@ transition: all 0.2 ease;
 
 }
 
+.active{
+  color: #ec8702;
+}
+
+/* slider */
+
+.image-source-link {
+	color: #98C3D1;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	/* ideally, transition speed should match zoom duration */
+	-webkit-transition: all 0.3s ease-out; 
+	-moz-transition: all 0.3s ease-out; 
+	-o-transition: all 0.3s ease-out; 
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+		opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+		opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
+
 /* animation */
 @-webkit-keyframes comming {
   from {
@@ -673,3 +722,4 @@ transition: all 0.2 ease;
             transform: scale(1);
   }
 }
+

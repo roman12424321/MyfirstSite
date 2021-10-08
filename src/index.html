@@ -2,8 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="src/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="src/Magnific-Popup-master/dist/magnific-popup.css">
     <link rel="stylesheet" href="style/style.css">
+
     <title>Document</title>
 </head>
 <body >
@@ -13,36 +18,67 @@
          <div class="preloader__item"></div>
     </div>
 </div>
-<header class="header">
+<header class="header fixed-top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-xl-2 col-xxl-2 col-6 header__logo">
-                  Андрей Браун
-                </div>
-                <menu class="col-lg-8 col-xl-8 col-xxl-6 text-center offset-xxl-4 offset-xl-2 offset-lg-1 d-none d-lg-block header__menu">
-                    <a href="#" class="header__item">ОБО МНЕ</a>
-                    <a href="#" class="header__item">УСЛУГИ</a>
-                    <a href="#" class="header__item">КЕЙСЫ</a>
-                    <a href="#" class="header__item">ПРАЙС</a>
-                    <a href="#" class="header__item">ОТЗЫВЫ</a>
-                    <a href="#" class="header__item">КОНТАКТЫ</a>
-                </menu>
-                <div class="col-5 d-flex d-lg-none flex-column justify-content-center align-items-end">
-                    <div class="dropdown ">
-                        <a class="btn btn-l btn-outline-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                          навигация
-                        </a>
-                      
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <li><a class="dropdown-item" href="#">ОБО МНЕ</a></li>
-                          <li><a class="dropdown-item" href="#">УСЛУГИ</a></li>
-                          <li><a class="dropdown-item" href="#">КЕЙСЫ</a></li>
-                          <li><a class="dropdown-item" href="#">ПРАЙС</a></li>
-                          <li><a class="dropdown-item" href="#">ОТЗЫВЫ</a></li>
-                          <li><a class="dropdown-item" href="#">КОНТАКТЫ</a></li>
+                <nav class="navbar navbar-expand-lg  ">
+                    <div class="container-fluid">
+                      <p class="navbar-brand col-2 header__logo" href="#">Андрей Браун</p>
+        
+                      <div class="collapse  navbar-collapse offset-2 col-6 text-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link header__item" href="#about">ОБО МНЕ</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link header__item" href="#what-can">НАВЫКИ</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link header__item" href="#cases">КЕЙСЫ</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link header__item" href="#price">ПРАЙС</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link header__item" href="#recall">ОТЗЫВЫ</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link header__item" href="#contact">КОНТАКТЫ</a>
+                          </li>
                         </ul>
                       </div>
+                      <div class="col-6 d-flex d-lg-none flex-column justify-content-center align-items-end">
+                        <div class="dropdown ">
+                            <a class="btn mb-3 btn-l btn-outline-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                              навигация
+                            </a>
+                          
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                              <li><a class="dropdown-item" href="#">ОБО МНЕ</a></li>
+                              <li><a class="dropdown-item" href="#">УСЛУГИ</a></li>
+                              <li><a class="dropdown-item" href="#">КЕЙСЫ</a></li>
+                              <li><a class="dropdown-item" href="#">ПРАЙС</a></li>
+                              <li><a class="dropdown-item" href="#">ОТЗЫВЫ</a></li>
+                              <li><a class="dropdown-item" href="#">КОНТАКТЫ</a></li>
+                            </ul>
+                          </div>
+                    </div>
+                    </div>
+                    
+                  </nav>
+                <!-- <div class="col-lg-3 col-xl-2 col-xxl-2 col-6 header__logo">
+                  Андрей Браун
                 </div>
+
+                <nav class="col-lg-8 col-xl-8 col-xxl-6 text-center offset-xxl-4 offset-xl-2 offset-lg-1 d-none d-lg-block header__menu">
+                    <a href="#about" class="header__item">ОБО МНЕ</a>
+                    <a href="#what-can" class="header__item">ОБО МНЕ</a>
+                    <a href="#cases" class="header__item">КЕЙСЫ</a>
+                    <a href="#price" class="header__item">ПРАЙС</a>
+                    <a href="#recall" class="header__item">ОТЗЫВЫ</a>
+                    <a href="#contact" class="header__item">КОНТАКТЫ</a>
+                </nav> -->
+
             </div>
         </div>
 </header>
@@ -63,7 +99,7 @@
         </div>
     </div>
 </div>
-<div class="about-me ">
+<div id="about"  class="section about-me ">
     <div class="container">
         <div class=" row flex-column justify-content-center align-items-center  ">
             <h2 class="title col-3">Мои работы</h2>
@@ -80,7 +116,7 @@
         </div>
     </div>
 </div>
-<div class="what-can ">
+<div id="what-can" class="what-can section ">
     <div class="container">
         <h2 class="title  what-can__title">ЧТО Я УМЕЮ</h2>
         <div class="row card-group ">
@@ -124,13 +160,28 @@
 
     </div>
 </div>
-<div class="cases">
+<div id="cases" class="cases section">
     <div class="container">
         <h2 class="title">кейсы</h2>
         <p class="title__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed Dapibus leo nec ornare diamcoccodo nibh ante facilisis.
         </p>
-        <img class="cases__img col-12" src="img/fotka_260.png" alt="">
+          <div class="row m-2">
+            <div class="zoom-gallery col-11 offset-1">
+                <a href="img/fotka_260.png"  title="Into The Blue" style="width:193px;height:125px;">
+                    <img src="img/fotka_260.png" width="310px" height="200">
+                </a>
+                <a href="img/pusto2.jpg"  title="Into The Blue" style="width:193px;height:125px;">
+                    <img src="img/pusto2.jpg" width="310px" height="200">
+                </a>
+                <a href="img/8-1024x583.png"  title="Light Sabre" style="width:82px;height:125px;">
+                    <img src="img/8-1024x583.png" width="310px" height="200">
+                </a>
+
+            </div>
+          </div>
+
+
         <div class="cases__info">
             <div class="row">
                 <div class="cases__info-left col-2">
@@ -152,29 +203,27 @@
         </div>
     </div>
 </div>
-<div class="price">
+<div id="price" class="price section">
     <div class="container">
         <h2 class="price__title">расчет стоимости</h2>
         <p class="price__heading">ТИП САЙТА</p>
-        <select class="form-select price__form " aria-label="Default select example">
-                <option selected> Выберите пункт...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+        <select id="typeSite" class="form-select price__form " aria-label="Default select example">
+                <option value="0" selected> Выберите пункт...</option>
+                <option id="priceOption" value="1000" data-price="2">лэндинг</option>
+                <option value="2000" >визитка</option>
+                <option value="3000" >корпаративный сайт</option>
         </select>
         <p class="price__heading">ДИЗАЙН</p>
-        <select class="form-select price__form" aria-label="Default select example">
-                <option selected> Выберите пункт...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+        <select id="Design" class="form-select price__form" aria-label="Default select example">
+                <option value="0" selected> Выберите пункт...</option>
+                <option id="DesignOption" value="1000" data-Ddesign="2">Минимальзм</option>
+                <option value="2000">флэт дизайн</option>
         </select>
         <p class="price__heading">АДАПТИВНОСТЬ</p>
-        <select class="form-select price__form price__form-bottom" aria-label="Default select example">
-                <option selected> Выберите пункт...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+        <select id="adaptive" class="form-select price__form price__form-bottom" aria-label="Default select example">
+                <option value="0" selected> Выберите пункт...</option>
+                <option id="adaptiveOption" data-adaptive="1" value="10" >Да</option>
+                <option value="0">нет</option>
         </select>
         <hr class="price__hr">
         <div class="row">
@@ -182,13 +231,13 @@
                 <h2 class="price__article price__term ">сроки:</h2> 
                 <h2 class="price__article price__coast">стоимость:</h2> 
             </div>
-            <div class="offset-9 col-1 text-end">
-                <p class="price__coast">0</p>
-                <p class="price__coast ">0</p>
+            <div class="offset-7 col-3 text-end">
+                <p class=" price__coast price__time">0</p>
+                <p class="price__coastv price__coast ">0</p>
             </div>
         </div>
         <div class="row">
-            <button class="btn  price__form-bottom cases__btn cases__btn-lg col-2 offset-5">оставить заявку</button>
+            <button id="btnn" class="btn  price__form-bottom cases__btn cases__btn-lg col-2 offset-5">оставить заявку</button>
         </div>
     </div>
 </div>
@@ -199,14 +248,14 @@
             <div class="card text-center col-lg-3" >
                 <img src="img/смайл.png" class="mx-auto ">
                 <div class="card-body">
-                    <h3 class="card-title card-title-black">120</h3>
+                    <h3 id="out" class="card-title card-title-black">0</h3>
                     <p class="card-text-black">СЧАСТЛИВЫХ КЛИЕНТОВ</p>
                 </div>
             </div>
             <div class="card text-center col-lg-3" >
                 <img src="img/скобки.png" class="mx-auto ">
                 <div class="card-body">
-                    <h3 class="card-title card-title-black">4,600</h3>
+                    <h3 id="outt" class="card-title card-title-black">0</h3>
                     <p class="card-text card-text-black">ЧАСОВ РАБОТЫ</p>
                 </div>
             </div>
@@ -228,29 +277,44 @@
 
     </div>
 </div>
-<div class="recall ">
+<div id="recall" class="recall section">
     <div class="container ">
         <div class="row justify-content-center">
             <h2 class="title">ОТЗЫВЫ</h2>
             <div class="recall__people col-8 ">
                 <div class="recall__item row">
-                    <img src="img/фотка2.png" alt="" class="recall__img col-xl-2 col-md-4 col-sm-3 offset-md-4 offset-xl-5">
-                    <p class="recall__text text-center">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante
-                        facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.
-                    </p>
-                    <p class="recall__position text-center"> <b>Михаил</b>, Ген директор ПАО “Газпром”.</p>
+                    <div class="slider one-time">
+                        <div>
+                            <img src="img/фотка2.png" alt="" class="recall__img col-xl-2 col-md-4 col-sm-3 offset-md-4 offset-xl-5">
+                            <p class="recall__text text-center">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante
+                                facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.
+                            </p>
+                            <p class="recall__position text-center"> <b>Михаил</b>, Ген директор ПАО “Газпром”.</p>
+                        </div>
+                        <div>
+                            <img src="img/фотка2.png" alt="" class="recall__img col-xl-2 col-md-4 col-sm-3 offset-md-4 offset-xl-5">
+                            <p class="recall__text text-center">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante
+                                facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.
+                            </p>
+                            <p class="recall__position text-center"> <b>Михаил</b>, Ген директор ПАО “Газпром”.</p>
+                        </div>
+                        <div>
+                            <img src="img/фотка2.png" alt="" class="recall__img col-xl-2 col-md-4 col-sm-3 offset-md-4 offset-xl-5">
+                            <p class="recall__text text-center">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante
+                                facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.
+                            </p>
+                            <p class="recall__position text-center"> <b>Михаил</b>, Ген директор ПАО “Газпром”.</p>
+                        </div>
+                    </div>
                 </div> 
-                <div class="recall__circle text-center ">
-                    <label for="" class="recall__radio "><input class="radio" type="radio" name="name"></label> 
-                    <label for="" class="recall__radio "><input  type="radio" name="name"></label>
-                    <label for="" class="recall__radio "><input  type="radio" name="name"></label>
-                </div>
             </div>
         </div>
     </div>
 </div>
-<div class="contact">
+<div id="contact" class="contact section">
     <div class="container">
         <h2 class="title contact__title--black">МОИ КОНТАКТЫ</h2>
         <p class="title__text title__text--white">
@@ -296,12 +360,14 @@
 <div class="map">
     <p class="map__text">i`m here</p>
 </div>
-
 <footer class="footer ">
         <p class="footer__text text-center">Copyright © 2021 Андрей Браун. Design by Web</p>
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="src/Magnific-Popup-master/dist/jquery.magnific-popup.js"></script>
 <script src="js/scripts.js"></script>
-
+<script src="js/myScript.js"></script>
+<script src="src/slick-1.8.1/slick/slick.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 </html>
