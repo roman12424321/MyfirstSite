@@ -68,46 +68,46 @@ btn.onclick = event => {
 
 
 
-const option = {
-  root:null,
-  rootMargin: '0px',
-  threshold: 1.0
-}
+// const option = {
+//   root:null,
+//   rootMargin: '0px',
+//   threshold: 1.0
+// }
 
-function v () {
+// function v () {
 
-  const time = 1000;
-  const step = 1;
-
-
-  let x = document.querySelector("#out");
-  let k = document.querySelector("#outt");
-
-  function outNum(num ,elem) {
-    let e = document.querySelector("#out");
-    n = 0;
-    let t = Math.round(time / (num / step));
-    let interval = setInterval(() => {
-      n = n + step;
-      if (n == num) {
-        clearInterval(interval);
-      }
-      e.innerHTML = n;
-    }, t);
-  }
-
-  outNum(100, "#out");
-  outNum(100, "#outt");
-
-}
+//   const time = 1000;
+//   const step = 1;
 
 
+//   let x = document.querySelector("#out");
+//   let k = document.querySelector("#outt");
+
+//   function outNum(num ,elem) {
+//     let e = document.querySelector("#out");
+//     n = 0;
+//     let t = Math.round(time / (num / step));
+//     let interval = setInterval(() => {
+//       n = n + step;
+//       if (n == num) {
+//         clearInterval(interval);
+//       }
+//       e.innerHTML = n;
+//     }, t);
+//   }
+
+//   outNum(100, "#out");
+//   outNum(100, "#outt");
+
+// }
 
 
 
-const observer = new IntersectionObserver (v,option) 
-
-let g = document.querySelector(".static");
 
 
-observer.observe(g)
+// const observer = new IntersectionObserver (v,option) 
+
+// let g = document.querySelector(".static");
+
+
+// observer.observe(g)
