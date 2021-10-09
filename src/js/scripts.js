@@ -68,46 +68,76 @@ btn.onclick = event => {
 
 
 
-// const option = {
-//   root:null,
-//   rootMargin: '0px',
-//   threshold: 1.0
-// }
-
-// function v () {
-
-//   const time = 1000;
-//   const step = 1;
-
-
-//   let x = document.querySelector("#out");
-//   let k = document.querySelector("#outt");
-
-//   function outNum(num ,elem) {
-//     let e = document.querySelector("#out");
-//     n = 0;
-//     let t = Math.round(time / (num / step));
-//     let interval = setInterval(() => {
-//       n = n + step;
-//       if (n == num) {
-//         clearInterval(interval);
-//       }
-//       e.innerHTML = n;
-//     }, t);
-//   }
-
-//   outNum(100, "#out");
-//   outNum(100, "#outt");
-
-// }
 
 
 
 
+let targets = document.querySelector(".out");
+let targetCont = targets.textContent;
 
-// const observer = new IntersectionObserver (v,option) 
+let out1 = document.querySelector(".out1");
+let out2 = document.querySelector(".out2");
+let out3 = document.querySelector(".out3");
+let out4 = document.querySelector(".out4");
 
-// let g = document.querySelector(".static");
+
+const time = 10000;
+const step = 1;
+
+function outNum(num, elem) {
+  n = 0;
+  let t = Math.round(time / (num / step));
+  let interval = setInterval(() => {
+    n = n + step;
+    if (n >= num) {
+      clearInterval(interval);
+    }
+    elem.innerHTML = n;
+  }, t);
+}
 
 
-// observer.observe(g)
+
+
+var options = {
+  root: document.querySelector('#scrollArea'),
+  rootMargin: '0px',
+  threshold: .01
+}
+
+function collback (){
+    outNum(119, out1)
+    outNum(400, out2)
+    outNum(340, out3)
+    outNum(23, out4)
+}
+
+var observer = new IntersectionObserver(collback, options);
+
+
+observer.observe(targets);
+
+
+// lazy loaded
+
+const imeges = document.querySelectorAll('img');
+
+
+
+
+function handleImg(myImg, observer) {
+  myImg.forEach(myImgSingle => {
+    if(myImgSingle.intersectionRatio > 0){
+      loadImage(myImgSingle.target);
+    }
+  });
+};
+
+function  loadImage(image){
+  image.src = image.getAttribute('data')
+}
+let observerr = new IntersectionObserver( handleImg, options);
+
+imeges.forEach(img =>{
+  observerr.observe(img);
+})
