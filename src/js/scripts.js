@@ -134,7 +134,8 @@ function handleImg(myImg, observer) {
 };
 
 function  loadImage(image){
-  image.src = image.getAttribute('data')
+  image.src = image.getAt
+  tribute('data')
 }
 let observerr = new IntersectionObserver( handleImg, options);
 
